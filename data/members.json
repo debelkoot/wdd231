@@ -1,0 +1,67 @@
+{
+  "members": [
+    {
+      "name": "Finfinne Tech Solutions",
+      "address": "Bole Road, Finfinne, Oromia",
+      "phone": "+251 11 555 1234",
+      "website": "https://finfinnetech.example.com",
+      "image": "finfinnetech.jpg",
+      "membership": 3,
+      "industry": "Software Engineering & IT"
+    },
+    {
+      "name": "Rift Valley Agro-Processing",
+      "address": "Station Area, Adama, Oromia",
+      "phone": "+251 22 111 4321",
+      "website": "https://riftvalleyagro.example.com",
+      "image": "riftvalley.jpg",
+      "membership": 2,
+      "industry": "Agriculture & Export"
+    },
+    {
+      "name": "Abasurfa General Trading",
+      "address": "Main Market Street, Adama, Oromia",
+      "phone": "+251 22 222 8899",
+      "website": "https://abasurfa.example.com",
+      "image": "abasurfa.jpg",
+      "membership": 1,
+      "industry": "Retail & Wholesale"
+    },
+    {
+      "name": "Harar Organic Coffee Exporters",
+      "address": "Coffee Board Building, Adama, Oromia",
+      "phone": "+251 22 333 7766",
+      "website": "https://hararcoffee.example.com",
+      "image": "hararcoffee.jpg",
+      "membership": 3,
+      "industry": "Beverages & Agriculture"
+    },
+    {
+      "name": "Oromia Logistics & Transport",
+      "address": "Expressway Terminal, Adama, Oromia",
+      "phone": "+251 22 444 9900",
+      "website": "https://oromialogistics.example.com",
+      "image": "oromialogistics.jpg",
+      "membership": 2,
+      "industry": "Logistics & Freight"
+    },
+    {
+      "name": "Bashawet Construction PLC",
+      "address": "Stadium District, Finfinne, Oromia",
+      "phone": "+251 11 222 3344",
+      "website": "https://bashawet.example.com",
+      "image": "bashawetrans.jpg",
+      "membership": 1,
+      "industry": "Civil Engineering & Building"
+    },
+    {
+      "name": "Gadaa Digital Marketing Hub",
+      "address": "Town Center, Adama, Oromia",
+      "phone": "+251 22 666 5544",
+      "website": "https://gadaadigital.example.com",
+      "image": "adamatruth.jpg",
+      "membership": 2,
+      "industry": "Media & Marketing"
+    }
+  ]
+}
