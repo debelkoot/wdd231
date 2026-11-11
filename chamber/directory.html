@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oromia Chamber of Commerce - Member Directory</title>
+    <meta name="description" content="Chamber of Commerce directory page displaying registered local businesses, member levels, and contact details.">
+    <meta name="author" content="Debela Mendara Refisa">
+
+    <!-- Facebook Open Graph Meta Tags -->
+    <meta property="og:title" content="Oromia Chamber of Commerce Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://debelkoot.github.io/wdd231/chamber/images/hero-chamber.jpg">
+    <meta property="og:url" content="https://debelkoot.github.io/wdd231/chamber/directory.html">
+    <meta property="og:description" content="Explore verified local business members within the Oromia Chamber of Commerce.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 32rem)">
+
+    <!-- JavaScript -->
+    <script src="scripts/directory.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-box">
+            <img src="images/chamber-logo.png" alt="Chamber Logo" width="60" height="60">
+            <div class="title-box">
+                <h1>Oromia Chamber</h1>
+                <p>Commerce & Industry</p>
+            </div>
+        </div>
+        <nav>
+            <button id="menu" aria-label="Toggle Navigation Menu"></button>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Member Directory</h2>
+        
+        <div class="view-toggle">
+            <button id="grid" title="Grid View">📱 Grid View</button>
+            <button id="list" title="List View">📋 List View</button>
+        </div>
+
+        <section id="members-container" class="grid">
+            <!-- JavaScript will dynamically inject member cards here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Oromia Chamber of Commerce | Debela Mendara | WDD 231</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
