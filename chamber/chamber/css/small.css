@@ -1,1 +1,250 @@
+:root {
+    --primary: #1B365D;      /* Deep Navy - 11.9:1 contrast on white */
+    --secondary: #0F5257;    /* Deep Teal - 8.7:1 contrast on white */
+    --accent: #F59E0B;       /* Warm Gold */
+    --bg-light: #F8FAFC;
+    --surface: #FFFFFF;
+    --text-dark: #1E293B;
+    --border: #CBD5E1;
+}
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    margin: 0;
+    line-height: 1.5;
+}
+
+h1, h2, .site-title {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Header & Navigation */
+header {
+    background-color: var(--primary);
+    color: var(--surface);
+    padding: 0.75rem 1rem;
+}
+
+.header-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.site-title {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.site-subtitle {
+    display: block;
+    font-size: 0.85rem;
+    color: #E2E8F0;
+}
+
+#menu-button {
+    background: none;
+    border: 1px solid var(--surface);
+    color: var(--surface);
+    font-size: 1.5rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+nav {
+    width: 100%;
+    display: none;
+}
+
+nav.open {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.75rem 0 0 0;
+}
+
+nav a {
+    display: block;
+    color: var(--surface);
+    text-decoration: none;
+    padding: 0.65rem 0.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    font-weight: 600;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: var(--secondary);
+    border-left: 4px solid var(--accent);
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+h1 {
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.view-controls {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.view-controls button {
+    padding: 0.6rem 1.2rem;
+    border: 2px solid var(--primary);
+    background-color: var(--surface);
+    color: var(--primary);
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.view-controls button.active-view {
+    background-color: var(--primary);
+    color: var(--surface);
+}
+
+/* Grid View */
+#members-container.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+}
+
+#members-container.grid section {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#members-container.grid img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 0.75rem;
+}
+
+#members-container h2 {
+    font-size: 1.15rem;
+    color: var(--primary);
+    margin: 0.5rem 0;
+}
+
+#members-container p {
+    margin: 0.25rem 0;
+    font-size: 0.92rem;
+}
+
+#members-container a {
+    color: var(--secondary);
+    font-weight: 600;
+    word-break: break-all;
+}
+
+.badge {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.2rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.level-3 { background-color: #FEF3C7; color: #92400E; }
+.level-2 { background-color: #E2E8F0; color: #1E293B; }
+.level-1 { background-color: #DBEAFE; color: #1E40AF; }
+
+/* List View (No Images per Rubric #10) */
+#members-container.list {
+    display: flex;
+    flex-direction: column;
+}
+
+#members-container.list section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+#members-container.list section:nth-child(odd) {
+    background-color: var(--surface);
+}
+
+#members-container.list section:nth-child(even) {
+    background-color: #E2E8F0;
+}
+
+#members-container.list img,
+#members-container.list .industry-tag {
+    display: none;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary);
+    color: var(--surface);
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+footer p {
+    margin: 0.2rem 0;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-social a {
+    color: var(--surface);
+    text-decoration: underline;
+    font-weight: 600;
+}
