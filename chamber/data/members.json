@@ -1,1 +1,65 @@
-
+[
+  {
+    "name": "Adama Great Rift Coffee Roasters",
+    "address": "Bole Road, Kebele 08, Adama",
+    "phone": "+251 22 112 3401",
+    "website": "https://example.com/riftroroasters",
+    "image": "rift-coffee.webp",
+    "membership": 3,
+    "industry": "Agriculture & Export"
+  },
+  {
+    "name": "Awash Valley Agro-Processing PLC",
+    "address": "Industrial Zone Plot 14, Adama",
+    "phone": "+251 22 111 8890",
+    "website": "https://example.com/awashagro",
+    "image": "awash-agro.webp",
+    "membership": 3,
+    "industry": "Manufacturing"
+  },
+  {
+    "name": "Sodere Thermal Resort & Spa",
+    "address": "Sodere Road Km 18, Adama",
+    "phone": "+251 22 211 0922",
+    "website": "https://example.com/sodereresort",
+    "image": "sodere-resort.webp",
+    "membership": 3,
+    "industry": "Hospitality & Tourism"
+  },
+  {
+    "name": "Oromia Tech & Cloud Solutions",
+    "address": "Ras Hotel Plaza, 3rd Floor, Adama",
+    "phone": "+251 22 110 7745",
+    "website": "https://example.com/oromiatech",
+    "image": "oromia-tech.webp",
+    "membership": 2,
+    "industry": "Information Technology"
+  },
+  {
+    "name": "Nazret Express Logistics",
+    "address": "Modjo-Adama Expressway Exit 2, Adama",
+    "phone": "+251 22 112 9012",
+    "website": "https://example.com/nazretlogistics",
+    "image": "nazret-logistics.webp",
+    "membership": 2,
+    "industry": "Transport & Freight"
+  },
+  {
+    "name": "Bishoftu-Adama Solar Engineering",
+    "address": "Post Office Avenue, Kebele 03, Adama",
+    "phone": "+251 22 111 6532",
+    "website": "https://example.com/adamasolar",
+    "image": "adama-solar.webp",
+    "membership": 2,
+    "industry": "Renewable Energy"
+  },
+  {
+    "name": "Koka Fresh Bakery & Pastry",
+    "address": "Franko Market Square, Adama",
+    "phone": "+251 22 111 2398",
+    "website": "https://example.com/kokabakery",
+    "image": "koka-bakery.webp",
+    "membership": 1,
+    "industry": "Food & Retail"
+  }
+]
