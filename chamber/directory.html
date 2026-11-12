@@ -1,66 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oromia Chamber of Commerce - Member Directory</title>
-    <meta name="description" content="Chamber of Commerce directory page displaying registered local businesses, member levels, and contact details.">
+    <title>Business Directory | Adama Chamber of Commerce</title>
+    <meta name="description" content="Explore verified local businesses, industries, and service providers in the Adama Chamber of Commerce directory.">
     <meta name="author" content="Debela Mendara Refisa">
 
-    <!-- Facebook Open Graph Meta Tags -->
-    <meta property="og:title" content="Oromia Chamber of Commerce Directory">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://debelkoot.github.io/wdd231/chamber/images/hero-chamber.jpg">
-    <meta property="og:url" content="https://debelkoot.github.io/wdd231/chamber/directory.html">
-    <meta property="og:description" content="Explore verified local business members within the Oromia Chamber of Commerce.">
-
     <!-- Favicon -->
-    <link rel="icon" href="images/favicon.ico">
+    <link rel="icon" href="favicon.ico">
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 32rem)">
+    <!-- Open Graph / Facebook Meta Tags (40-60 chars for title, 50-160 chars for description) -->
+    <meta property="og:title" content="Business Directory | Adama Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Discover verified local businesses, industries, and service providers in the official Adama Chamber of Commerce directory.">
+    <meta property="og:image" content="https://debelkoot.github.io/wdd231/chamber/images/og-adama-chamber.webp">
+    <meta property="og:url" content="https://debelkoot.github.io/wdd231/chamber/directory.html">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/larger.css">
 
     <!-- JavaScript -->
     <script src="scripts/directory.js" defer></script>
 </head>
 <body>
     <header>
-        <div class="header-box">
-            <img src="images/chamber-logo.png" alt="Chamber Logo" width="60" height="60">
-            <div class="title-box">
-                <h1>Oromia Chamber</h1>
-                <p>Commerce & Industry</p>
+        <div class="header-container">
+            <div class="brand">
+                <img src="images/logo.webp" alt="Adama Chamber of Commerce Logo" width="50" height="50">
+                <div>
+                    <span class="site-title">Adama</span>
+                    <span class="site-subtitle">Chamber of Commerce</span>
+                </div>
             </div>
+            <button id="menu-button" aria-label="Toggle Navigation Menu" aria-expanded="false">☰</button>
+            <nav id="primary-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html" class="active" aria-current="page">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <button id="menu" aria-label="Toggle Navigation Menu"></button>
-            <ul class="navigation">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="discover.html">Discover</a></li>
-                <li><a href="directory.html" class="active">Directory</a></li>
-                <li><a href="join.html">Join</a></li>
-            </ul>
-        </nav>
     </header>
 
     <main>
-        <h2>Member Directory</h2>
+        <h1>Business Directory</h1>
         
-        <div class="view-toggle">
-            <button id="grid" title="Grid View">📱 Grid View</button>
-            <button id="list" title="List View">📋 List View</button>
+        <div class="view-controls" role="group" aria-label="Directory Layout View">
+            <button id="grid-btn" class="active-view" aria-pressed="true">⏹ Grid View</button>
+            <button id="list-btn" aria-pressed="false">☰ List View</button>
         </div>
 
-        <section id="members-container" class="grid">
-            <!-- JavaScript will dynamically inject member cards here -->
-        </section>
+        <div id="members-container" class="grid"></div>
     </main>
 
     <footer>
-        <p>&copy; <span id="currentyear"></span> Oromia Chamber of Commerce | Debela Mendara | WDD 231</p>
-        <p id="lastModified"></p>
+        <div class="footer-container">
+            <div class="footer-contact">
+                <p><strong>Adama Chamber of Commerce</strong></p>
+                <p>Franko Street, Kebele 04</p>
+                <p>Adama, Oromia, Ethiopia</p>
+                <p>info@adamachamber.org</p>
+                <p>+251 22 111 4500</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">YouTube</a>
+                <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="X Twitter">X</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+            </div>
+            <div class="footer-dev">
+                <p>WDD 231 Class Project</p>
+                <p>Debela Mendara Refisa</p>
+                <p>&copy; <span id="currentyear"></span> Adama Chamber of Commerce</p>
+                <p id="lastModified"></p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
