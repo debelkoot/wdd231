@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Received | Oromia Chamber of Commerce</title>
+    <meta name="description" content="Thank you for applying to join the Chamber of Commerce.">
+    <meta name="author" content="Debela Mendara Refisa">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/join.css">
+    <link rel="icon" href="images/favicon.ico">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
+</head>
+<body>
+    <!-- Common Chamber Header -->
+    <header>
+        <div class="header-container">
+            <img src="images/chamber-logo.webp" alt="Chamber of Commerce Logo" width="60" height="60">
+            <div class="site-title">
+                <span>Oromia</span>
+                <p>Chamber of Commerce</p>
+            </div>
+            <button id="menu-button" aria-label="Toggle Navigation Menu">&#9776;</button>
+        </div>
+        <nav id="primary-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="thankyou-main">
+        <div class="confirmation-card">
+            <h1>Thank You for Your Application!</h1>
+            <p>We appreciate your interest in joining the Oromia Chamber of Commerce. Our membership committee will review your submission and contact you shortly.</p>
+            
+            <section class="submitted-details">
+                <h2>Application Summary</h2>
+                <div id="results-container" class="results-grid">
+                    <!-- Populated dynamically via thankyou.js -->
+                </div>
+            </section>
+
+            <a href="index.html" class="return-btn">Return to Home Page</a>
+        </div>
+    </main>
+
+    <!-- Common Chamber Footer -->
+    <footer>
+        <div class="footer-info">
+            <p><strong>Oromia Chamber of Commerce</strong></p>
+            <p>Adama / Finfinne, Oromia, Ethiopia</p>
+            <p>info@oromiachamber.org | +251 22 111 0000</p>
+        </div>
+        <div class="footer-meta">
+            <p>WDD 231 Class Project | Debela Mendara Refisa</p>
+            <p>&copy; <span id="currentyear"></span> Oromia Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>
