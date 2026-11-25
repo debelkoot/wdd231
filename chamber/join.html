@@ -6,7 +6,13 @@
     <title>Join the Chamber | Oromia Chamber of Commerce</title>
     <meta name="description" content="Apply for membership with the Chamber of Commerce. Choose from NP, Bronze, Silver, or Gold membership tiers.">
     <meta name="author" content="Debela Mendara Refisa">
-    
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Join the Oromia Chamber of Commerce">
+    <meta property="og:description" content="Apply for NP, Bronze, Silver, or Gold membership and explore business benefits with the Oromia Chamber of Commerce.">
+    <meta property="og:image" content="https://debelkoot.github.io/wdd231/chamber/images/chamber-logo.webp">
+    <meta property="og:url" content="https://debelkoot.github.io/wdd231/chamber/join.html">
+
     <!-- Replace with your existing Chamber CSS and Favicon links -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
@@ -48,60 +54,60 @@
             <section class="form-section">
                 <h2>Applicant &amp; Business Information</h2>
                 <form method="get" action="thankyou.html" class="chamber-form">
-                    
+
                     <label title="Enter your first name">
                         First Name <span class="required">*</span>
-                        <input type="text" 
-                               name="firstName" 
-                               title="Applicant's First Name" 
-                               autocomplete="given-name" 
+                        <input type="text"
+                               name="firstName"
+                               title="Applicant's First Name"
+                               autocomplete="given-name"
                                required>
                     </label>
 
                     <label title="Enter your last name">
                         Last Name <span class="required">*</span>
-                        <input type="text" 
-                               name="lastName" 
-                               title="Applicant's Last Name" 
-                               autocomplete="family-name" 
+                        <input type="text"
+                               name="lastName"
+                               title="Applicant's Last Name"
+                               autocomplete="family-name"
                                required>
                     </label>
 
                     <label title="Enter your title within your organization (letters, spaces, and hyphens only, minimum 7 characters)">
                         Organizational Title
-                        <input type="text" 
-                               name="orgTitle" 
-                               title="Organizational Title (at least 7 characters; only letters, hyphens, and spaces allowed)" 
-                               autocomplete="organization-title" 
+                        <input type="text"
+                               name="orgTitle"
+                               title="Organizational Title (at least 7 characters; only letters, hyphens, and spaces allowed)"
+                               autocomplete="organization-title"
                                pattern="[A-Za-z\s\-]{7,}"
                                placeholder="e.g., Managing Director">
                     </label>
 
                     <label title="Enter a valid email address">
                         Email Address <span class="required">*</span>
-                        <input type="email" 
-                               name="email" 
-                               title="Applicant's Email Address" 
-                               autocomplete="email" 
-                               placeholder="name@business.com" 
+                        <input type="email"
+                               name="email"
+                               title="Applicant's Email Address"
+                               autocomplete="email"
+                               placeholder="name@business.com"
                                required>
                     </label>
 
                     <label title="Enter your mobile telephone number">
                         Mobile Phone Number <span class="required">*</span>
-                        <input type="tel" 
-                               name="phone" 
-                               title="Applicant's Mobile Phone Number" 
-                               autocomplete="tel" 
+                        <input type="tel"
+                               name="phone"
+                               title="Applicant's Mobile Phone Number"
+                               autocomplete="tel"
                                required>
                     </label>
 
                     <label title="Enter the name of your business or organization">
                         Business / Organization Name <span class="required">*</span>
-                        <input type="text" 
-                               name="organization" 
-                               title="Business or Organization Name" 
-                               autocomplete="organization" 
+                        <input type="text"
+                               name="organization"
+                               title="Business or Organization Name"
+                               autocomplete="organization"
                                required>
                     </label>
 
@@ -118,9 +124,9 @@
 
                     <label title="Provide a brief description of your business or organization">
                         Business / Organization Description
-                        <textarea name="description" 
-                                  title="Business or Organization Description" 
-                                  rows="4" 
+                        <textarea name="description"
+                                  title="Business or Organization Description"
+                                  rows="4"
                                   placeholder="Tell us about your products, services, or mission..."></textarea>
                     </label>
 
@@ -135,7 +141,7 @@
             <section class="membership-cards-section">
                 <h2>Membership Levels</h2>
                 <div class="cards-container">
-                    
+
                     <div class="membership-card card-1">
                         <h3>Non-Profit (NP) Membership</h3>
                         <p class="price-tag">Free</p>
