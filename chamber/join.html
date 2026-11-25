@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Chamber | Oromia Chamber of Commerce</title>
+    <meta name="description" content="Apply for membership with the Chamber of Commerce. Choose from NP, Bronze, Silver, or Gold membership tiers.">
+    <meta name="author" content="Debela Mendara Refisa">
+    
+    <!-- Replace with your existing Chamber CSS and Favicon links -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/join.css">
+    <link rel="icon" href="images/favicon.ico">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+</head>
+<body>
+    <!-- Common Chamber Header -->
+    <header>
+        <div class="header-container">
+            <img src="images/chamber-logo.webp" alt="Chamber of Commerce Logo" width="60" height="60">
+            <div class="site-title">
+                <span>Oromia</span>
+                <p>Chamber of Commerce</p>
+            </div>
+            <button id="menu-button" aria-label="Toggle Navigation Menu">&#9776;</button>
+        </div>
+        <nav id="primary-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="join-main">
+        <h1>Membership Application</h1>
+        <p class="intro-text">Complete the form below to become a member of our growing business community.</p>
+
+        <div class="join-layout">
+            <!-- Membership Application Form -->
+            <section class="form-section">
+                <h2>Applicant &amp; Business Information</h2>
+                <form method="get" action="thankyou.html" class="chamber-form">
+                    
+                    <label title="Enter your first name">
+                        First Name <span class="required">*</span>
+                        <input type="text" 
+                               name="firstName" 
+                               title="Applicant's First Name" 
+                               autocomplete="given-name" 
+                               required>
+                    </label>
+
+                    <label title="Enter your last name">
+                        Last Name <span class="required">*</span>
+                        <input type="text" 
+                               name="lastName" 
+                               title="Applicant's Last Name" 
+                               autocomplete="family-name" 
+                               required>
+                    </label>
+
+                    <label title="Enter your title within your organization (letters, spaces, and hyphens only, minimum 7 characters)">
+                        Organizational Title
+                        <input type="text" 
+                               name="orgTitle" 
+                               title="Organizational Title (at least 7 characters; only letters, hyphens, and spaces allowed)" 
+                               autocomplete="organization-title" 
+                               pattern="[A-Za-z\s\-]{7,}"
+                               placeholder="e.g., Managing Director">
+                    </label>
+
+                    <label title="Enter a valid email address">
+                        Email Address <span class="required">*</span>
+                        <input type="email" 
+                               name="email" 
+                               title="Applicant's Email Address" 
+                               autocomplete="email" 
+                               placeholder="name@business.com" 
+                               required>
+                    </label>
+
+                    <label title="Enter your mobile telephone number">
+                        Mobile Phone Number <span class="required">*</span>
+                        <input type="tel" 
+                               name="phone" 
+                               title="Applicant's Mobile Phone Number" 
+                               autocomplete="tel" 
+                               required>
+                    </label>
+
+                    <label title="Enter the name of your business or organization">
+                        Business / Organization Name <span class="required">*</span>
+                        <input type="text" 
+                               name="organization" 
+                               title="Business or Organization Name" 
+                               autocomplete="organization" 
+                               required>
+                    </label>
+
+                    <label title="Select a membership tier">
+                        Membership Level
+                        <select name="membershipLevel" title="Select Membership Level">
+                            <option value="" disabled selected>Select a Membership Level...</option>
+                            <option value="np">NP Membership (Non-Profit - No Fee)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
+
+                    <label title="Provide a brief description of your business or organization">
+                        Business / Organization Description
+                        <textarea name="description" 
+                                  title="Business or Organization Description" 
+                                  rows="4" 
+                                  placeholder="Tell us about your products, services, or mission..."></textarea>
+                    </label>
+
+                    <!-- Hidden Timestamp Field -->
+                    <input type="hidden" name="timestamp" id="timestamp">
+
+                    <input type="submit" value="Submit Membership Application" class="submit-btn">
+                </form>
+            </section>
+
+            <!-- 4 Membership Level Cards -->
+            <section class="membership-cards-section">
+                <h2>Membership Levels</h2>
+                <div class="cards-container">
+                    
+                    <div class="membership-card card-1">
+                        <h3>Non-Profit (NP) Membership</h3>
+                        <p class="price-tag">Free</p>
+                        <button type="button" class="info-btn" data-modal="modal-np">View Benefits</button>
+                    </div>
+
+                    <div class="membership-card card-2">
+                        <h3>Bronze Membership</h3>
+                        <p class="price-tag">$250 / year</p>
+                        <button type="button" class="info-btn" data-modal="modal-bronze">View Benefits</button>
+                    </div>
+
+                    <div class="membership-card card-3">
+                        <h3>Silver Membership</h3>
+                        <p class="price-tag">$500 / year</p>
+                        <button type="button" class="info-btn" data-modal="modal-silver">View Benefits</button>
+                    </div>
+
+                    <div class="membership-card card-4">
+                        <h3>Gold Membership</h3>
+                        <p class="price-tag">$1,000 / year</p>
+                        <button type="button" class="info-btn" data-modal="modal-gold">View Benefits</button>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <!-- 4 HTML Modals for Membership Benefits -->
+        <dialog id="modal-np" class="benefit-modal">
+            <div class="modal-header">
+                <h3>Non-Profit (NP) Membership Benefits</h3>
+                <button type="button" class="close-modal" aria-label="Close Modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Cost:</strong> No Fee (Verified 501(c)(3) or registered NGOs only)</p>
+                <ul>
+                    <li>Standard listing in the online Chamber Business Directory</li>
+                    <li>Access to monthly community networking mixers</li>
+                    <li>Subscription to the Chamber newsletter &amp; policy updates</li>
+                    <li>Eligibility to post community volunteer opportunities</li>
+                </ul>
+            </div>
+        </dialog>
+
+        <dialog id="modal-bronze" class="benefit-modal">
+            <div class="modal-header">
+                <h3>Bronze Membership Benefits</h3>
+                <button type="button" class="close-modal" aria-label="Close Modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Cost:</strong> $250 / year</p>
+                <ul>
+                    <li>All Non-Profit Membership benefits</li>
+                    <li>Enhanced directory listing with company logo and website link</li>
+                    <li>10% discount on Chamber workshops and business training</li>
+                    <li>Ribbon-cutting ceremony announcement on Chamber social media</li>
+                </ul>
+            </div>
+        </dialog>
+
+        <dialog id="modal-silver" class="benefit-modal">
+            <div class="modal-header">
+                <h3>Silver Membership Benefits</h3>
+                <button type="button" class="close-modal" aria-label="Close Modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Cost:</strong> $500 / year</p>
+                <ul>
+                    <li>All Bronze Membership benefits</li>
+                    <li>25% discount on all Chamber events, expos, and training seminars</li>
+                    <li>Quarterly rotating spotlight feature on the Chamber Home Page</li>
+                    <li>Access to exclusive Business-to-Business (B2B) lead generation groups</li>
+                    <li>2 complimentary tickets to the Annual Chamber Gala</li>
+                </ul>
+            </div>
+        </dialog>
+
+        <dialog id="modal-gold" class="benefit-modal">
+            <div class="modal-header">
+                <h3>Gold Membership Benefits</h3>
+                <button type="button" class="close-modal" aria-label="Close Modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Cost:</strong> $1,000 / year</p>
+                <ul>
+                    <li>All Silver Membership benefits</li>
+                    <li>Permanent premium spotlight banner placement on the Home Page</li>
+                    <li>50% discount on booth space at the Annual Regional Trade Show</li>
+                    <li>VIP seating and speaking opportunities at Chamber luncheons</li>
+                    <li>Dedicated business consultation and advocacy representation</li>
+                </ul>
+            </div>
+        </dialog>
+    </main>
+
+    <!-- Common Chamber Footer -->
+    <footer>
+        <div class="footer-info">
+            <p><strong>Oromia Chamber of Commerce</strong></p>
+            <p>Adama / Finfinne, Oromia, Ethiopia</p>
+            <p>info@oromiachamber.org | +251 22 111 0000</p>
+        </div>
+        <div class="footer-meta">
+            <p>WDD 231 Class Project | Debela Mendara Refisa</p>
+            <p>&copy; <span id="currentyear"></span> Oromia Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>
